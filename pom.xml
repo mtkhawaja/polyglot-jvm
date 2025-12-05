@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.1.0</modelVersion>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-parent -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.0</version>
+        <relativePath/>
+    </parent>
+
+
+    <groupId>com.muneebkhawaja</groupId>
+    <artifactId>polyglot-jvm</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    
+    <name>Polyglot JVM</name>
+    <url>https://github.com/mtkhawaja/polyglot-jvm</url>
+    <description>
+        A JVM multiverse demo exploring coexistence, compilation, and execution of multiple JVM languages
+        within one Maven build and unified bytecode universe.
+    </description>
+
+    <properties>
+        <jave.version>25</jave.version>
+        <revision>0.0.1-SNAPSHOT</revision>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
+
+    <!-- mvn4: Use subprojects instead of modules -->
+    <subprojects>
+        <subproject>app</subproject>
+    </subprojects>
+
+</project>
