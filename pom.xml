@@ -37,6 +37,7 @@
         <subproject>app</subproject>
         <subproject>groovy-lib</subproject>
         <subproject>scala-lib</subproject>
+        <subproject>kotlin-lib</subproject>
     </subprojects>
 
 </project>

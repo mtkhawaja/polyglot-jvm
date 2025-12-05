@@ -27,7 +27,11 @@
             <artifactId>polyglot-scala-lib</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.muneebkhawaja</groupId>
+            <artifactId>polyglot-kotlin-lib</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

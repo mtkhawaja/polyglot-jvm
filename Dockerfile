@@ -23,6 +23,7 @@ COPY app/pom.xml app/pom.xml
 COPY common/pom.xml common/pom.xml
 COPY groovy-lib/pom.xml groovy-lib/pom.xml
 COPY scala-lib/pom.xml scala-lib/pom.xml
+COPY kotlin-lib/pom.xml kotlin-lib/pom.xml
 
 # Download dependencies for the whole reactor as a separate step and cache the local repo.
 RUN --mount=type=cache,target=/root/.m2 \
