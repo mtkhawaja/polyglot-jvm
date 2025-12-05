@@ -15,7 +15,7 @@
     <artifactId>polyglot-jvm</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
-    
+
     <name>Polyglot JVM</name>
     <url>https://github.com/mtkhawaja/polyglot-jvm</url>
     <description>
@@ -33,7 +33,9 @@
 
     <!-- mvn4: Use subprojects instead of modules -->
     <subprojects>
+        <subproject>common</subproject>
         <subproject>app</subproject>
+        <subproject>groovy-lib</subproject>
     </subprojects>
 
 </project>
