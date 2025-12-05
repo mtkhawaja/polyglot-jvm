@@ -190,3 +190,7 @@ README.html
 # Maven Flatten Plugin
 
 .flattened-pom.xml
+
+
+.lsp
+.clj-kondo

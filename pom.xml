@@ -38,6 +38,17 @@
         <subproject>groovy-lib</subproject>
         <subproject>scala-lib</subproject>
         <subproject>kotlin-lib</subproject>
+        <subproject>clojure-lib</subproject>
     </subprojects>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.clojure</groupId>
+                <artifactId>clojure</artifactId>
+                <version>1.12.3</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
