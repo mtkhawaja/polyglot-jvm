@@ -20,6 +20,9 @@ COPY .mvn/ .mvn/
 # Copy only pom files first to leverage Docker layer caching for dependency resolution
 COPY pom.xml pom.xml
 COPY app/pom.xml app/pom.xml
+COPY common/pom.xml common/pom.xml
+COPY groovy-lib/pom.xml groovy-lib/pom.xml
+COPY scala-lib/pom.xml scala-lib/pom.xml
 
 # Download dependencies for the whole reactor as a separate step and cache the local repo.
 RUN --mount=type=cache,target=/root/.m2 \
@@ -40,7 +43,7 @@ WORKDIR /build
 # Copy the entire source tree (after dependency layer) and build all modules in the reactor
 COPY . .
 RUN --mount=type=cache,target=/root/.m2 \
-    ./mvnw -q -DskipTests package && \
+    ./mvnw -q -DskipTests install && \
     APP_JAR=$(ls app/target/*.jar | grep -v "original" | head -n 1) && \
     cp "$APP_JAR" app/target/app.jar
 
